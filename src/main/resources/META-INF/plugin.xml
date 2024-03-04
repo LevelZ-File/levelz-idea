@@ -1,0 +1,18 @@
+<idea-plugin>
+    <id>me.gamercoder215.calcgames.levelz.idea</id>
+    <name>LevelZ File Format</name>
+    <vendor>Calculus Games</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <resource-bundle>lang.levelz</resource-bundle>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <fileType
+                name="LevelZ File Format"
+                implementationClass="me.gamercoder215.calcgames.levelz.idea.LevelZType"
+                fieldName="INSTANCE"
+                language="LevelZ"
+                extensions="lvlz"/>
+    </extensions>
+</idea-plugin>
