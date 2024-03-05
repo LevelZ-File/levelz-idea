@@ -1,0 +1,24 @@
+{
+   parserClass="me.gamercoder215.calcgames.levelz.idea.LevelZParser"
+
+   extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+   psiClassPrefix="LevelZ"
+   psiImplClassSuffix="Impl"
+   psiPackage="me.gamercoder215.calcgames.levelz.idea.psi"
+   psiImplPackage="me.gamercoder215.calcgames.levelz.idea.psi.impl"
+
+   elementTypeHolderClass="me.gamercoder215.calcgames.levelz.idea.psi.LevelZTypes"
+   elementTypeClass="me.gamercoder215.calcgames.levelz.idea.psi.LevelZElementType"
+   tokenTypeClass="me.gamercoder215.calcgames.levelz.idea.psi.LevelZTokenType"
+}
+
+levelz_file ::= header split line* end
+
+private header ::= "regexp:@[A-z]*"
+
+private split ::= "---"
+
+private line ::= "regexp:.*"
+
+private end ::= "end"
